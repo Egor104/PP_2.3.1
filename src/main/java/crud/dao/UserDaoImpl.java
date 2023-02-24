@@ -1,8 +1,5 @@
 package crud.dao;
 
-//import jakarta.persistence.EntityManager;
-//import jakarta.persistence.PersistenceContext;
-//import jakarta.persistence.TypedQuery;
 import javax.persistence.*;
 import org.springframework.stereotype.Repository;
 import crud.model.User;
@@ -25,7 +22,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public void removeUserById(Long id) {
+    public void removeUser(Long id) {
         entityManager.remove(getUserById(id));
     }
 
